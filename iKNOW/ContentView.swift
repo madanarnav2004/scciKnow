@@ -60,8 +60,8 @@ struct ContentView: View {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("Bearer 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", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("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", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let parameters = ["prompt": query, "max_tokens": 50, "n": 1, "stop": ["\n"]] as [String : Any]
         
@@ -97,3 +97,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+ 
